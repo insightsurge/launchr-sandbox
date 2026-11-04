@@ -26,7 +26,7 @@ concurrency:
 
 jobs:
   check:
-    uses: insightsurge/launchR/.github/workflows/full-tests.yaml@c8449eeb90bc1967c9f7fc93c274161f70f8390d
+    uses: insightsurge/launchR/.github/workflows/full-tests.yaml@2c3a964c40de23716ad6ee05ec92f7b78b213d00
     with:
       # One entry per run, as system/R version, comma separated. System: ubuntu, windows, macos.
       # R version: release, devel, oldrel-1, or a number such as 4.1. R 4.1 on macos may fail: it has no ready-built packages.

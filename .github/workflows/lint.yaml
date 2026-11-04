@@ -26,4 +26,4 @@ concurrency:
 
 jobs:
   check:
-    uses: insightsurge/launchR/.github/workflows/lint.yaml@c8449eeb90bc1967c9f7fc93c274161f70f8390d
+    uses: insightsurge/launchR/.github/workflows/lint.yaml@2c3a964c40de23716ad6ee05ec92f7b78b213d00
