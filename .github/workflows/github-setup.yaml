@@ -27,7 +27,7 @@ permissions:
 
 jobs:
   setup:
-    uses: insightsurge/launchR/.github/workflows/github-setup.yaml@fe96778ab48172a3619472b3d1a723fcfe82a8a8
+    uses: insightsurge/launchR/.github/workflows/github-setup.yaml@e82eb328ec9c2be5471a9ffa33a281dcaf4fcac3
     with:
       dry-run: ${{ github.event_name != 'workflow_dispatch' || inputs.dry-run }}
       remove-other-labels: ${{ github.event_name == 'workflow_dispatch' && inputs.remove-other-labels }}

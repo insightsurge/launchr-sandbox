@@ -26,7 +26,7 @@ concurrency:
 
 jobs:
   check:
-    uses: insightsurge/launchR/.github/workflows/coverage.yaml@fe96778ab48172a3619472b3d1a723fcfe82a8a8
+    uses: insightsurge/launchR/.github/workflows/coverage.yaml@e82eb328ec9c2be5471a9ffa33a281dcaf4fcac3
     with:
       timeout-minutes: 0   # longest the job may run, in minutes; 0 keeps launchR's default: 60
     # To send results to Codecov, add a CODECOV_TOKEN secret and uncomment these lines at job level:
