@@ -26,7 +26,7 @@ concurrency:
 
 jobs:
   check:
-    uses: insightsurge/launchR/.github/workflows/r-cmd-check.yaml@ed1632af1bdd047000bcd0c5f840b7cefc712b53
+    uses: insightsurge/launchR/.github/workflows/r-cmd-check.yaml@645c70975fff277b1bd32a38538eda750ddd3218
     with:
       ci-report: true   # the CI report comment on pull requests: true posts it, false leaves it out
       # One entry per run, as system/R version, comma separated. System: ubuntu, windows, macos.
