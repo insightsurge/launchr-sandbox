@@ -70,7 +70,7 @@ package's folder, in R:
 
 ```r
 gate <- tempfile(fileext = ".R")
-download.file("https://raw.githubusercontent.com/insightsurge/launchR/v0.0.15/quality-gate/quality-gate.R", gate)
+download.file("https://raw.githubusercontent.com/insightsurge/launchR/v0.0.16/quality-gate/quality-gate.R", gate)
 system2(file.path(R.home("bin"), "Rscript"), c(gate, "full"))
 ```
 
@@ -98,11 +98,11 @@ Your CI keeps working on the old version either way.
 To keep your own copy of the checks, for example if your organisation blocks outside workflows, run launchR's `eject`
 command. The checks then live in this repository and nothing depends on launchR. "Run the checks on your computer"
 above then uses the copy of the gate in `.launchr/`. From the package's folder, in R, this downloads launchR
-0.0.15 and runs it:
+0.0.16 and runs it:
 
 ```r
 archive <- tempfile(fileext = ".tar.gz")
-download.file("https://github.com/insightsurge/launchR/archive/refs/tags/v0.0.15.tar.gz", archive, mode = "wb")
+download.file("https://github.com/insightsurge/launchR/archive/refs/tags/v0.0.16.tar.gz", archive, mode = "wb")
 folder <- tempfile()
 untar(archive, exdir = folder)
 launchr <- list.dirs(folder, recursive = FALSE)[1]
