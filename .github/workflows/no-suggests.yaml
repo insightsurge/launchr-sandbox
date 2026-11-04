@@ -26,6 +26,6 @@ concurrency:
 
 jobs:
   check:
-    uses: insightsurge/launchR/.github/workflows/no-suggests.yaml@fcd9731770871df4ba229352633f86e2305e950d
+    uses: insightsurge/launchR/.github/workflows/no-suggests.yaml@fe96778ab48172a3619472b3d1a723fcfe82a8a8
     with:
       timeout-minutes: 0   # longest the job may run, in minutes; 0 keeps launchR's default: 90
