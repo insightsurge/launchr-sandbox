@@ -5,7 +5,8 @@ body:
   - type: markdown
     attributes:
       value: |
-        Search existing issues first. Use public examples and made-up data; leave out private data, machine paths and private links.
+        Search existing issues first. Use made-up data, and leave out private data, credentials and machine paths.
+        Link only to public examples.
   - type: textarea
     id: idea
     attributes:

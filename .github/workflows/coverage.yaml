@@ -26,8 +26,9 @@ concurrency:
 
 jobs:
   check:
-    uses: insightsurge/launchR/.github/workflows/coverage.yaml@f670694aebc9fcc876d86efe4ce1948d4db6949d
+    uses: insightsurge/launchR/.github/workflows/coverage.yaml@ed1632af1bdd047000bcd0c5f840b7cefc712b53
     with:
+      ci-report: true   # the CI report comment on pull requests: true posts it, false leaves it out
       timeout-minutes: 0   # longest the job may run, in minutes; 0 keeps launchR's default: 60
     # To send results to Codecov, add a CODECOV_TOKEN secret and uncomment these lines at job level:
     # secrets:
