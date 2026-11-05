@@ -24,7 +24,7 @@ concurrency:
 
 jobs:
   check:
-    uses: insightsurge/launchR/.github/workflows/r-cmd-check-extended.yaml@316f9024cedb2b9872ee656dbaa2696731870acd
+    uses: insightsurge/launchR/.github/workflows/r-cmd-check-extended.yaml@c9f395615e9875c8a98d8f25429398c29ea0d4b0
     with:
       # One entry per run, as system/R version, comma separated. System: ubuntu, windows, macos.
       # R version: release, devel, oldrel-1, or a number such as 4.1. R 4.1 on macos may fail: it has no ready-built packages.
