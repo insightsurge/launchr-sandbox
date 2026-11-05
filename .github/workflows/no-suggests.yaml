@@ -26,7 +26,7 @@ concurrency:
 
 jobs:
   check:
-    uses: insightsurge/launchR/.github/workflows/no-suggests.yaml@645c70975fff277b1bd32a38538eda750ddd3218
+    uses: insightsurge/launchR/.github/workflows/no-suggests.yaml@966c1fd3565b4659c1ea3d34164bf1429c8a5e34
     with:
       ci-report: true   # the CI report comment on pull requests: true posts it, false leaves it out
       timeout-minutes: 0   # longest the job may run, in minutes; 0 keeps launchR's default: 90
