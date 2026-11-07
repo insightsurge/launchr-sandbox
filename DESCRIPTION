@@ -13,7 +13,8 @@ Suggests:
     chromote,
     testthat (>= 3.1.7)
 Config/quality-gate/coverage: 70
-Config/launchR/version: 0.0.17
+Config/launchR/version: 0.0.19
+Config/launchR/checklists: Set up, After public, Before CRAN, After acceptance, Next release
 Config/testthat/edition: 3
 Config/testthat/parallel: true
 Encoding: UTF-8
