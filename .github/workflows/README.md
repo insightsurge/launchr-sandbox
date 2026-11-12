@@ -69,11 +69,16 @@ install.packages(c(
 The style step also needs [Air](https://posit-dev.github.io/air/), and [Biome](https://biomejs.dev) when the package
 has JS or CSS. A missing one is named in the first FAIL line; without pkgdown, the website step is skipped.
 
+The new-lines check counts the lines a branch adds in `R/` only, not JS or CSS. The default `fast` mode does not run the
+no-Suggests check, so an example that uses a Suggests package without guarding it passes there and fails in CI: when a
+mode leaves it out, the run ends with a note saying so. When the spelling step fails, it prints the command that adds
+the unknown words.
+
 Then, from the package's folder, in R:
 
 ```r
 gate <- tempfile(fileext = ".R")
-download.file("https://raw.githubusercontent.com/insightsurge/launchR/v0.0.19/quality-gate/quality-gate.R", gate)
+download.file("https://raw.githubusercontent.com/insightsurge/launchR/v0.1.0/quality-gate/quality-gate.R", gate)
 system2(file.path(R.home("bin"), "Rscript"), c(gate, "full"))
 ```
 
@@ -89,7 +94,8 @@ or `MASS` ship with R and don't count.
 Dependabot opens a pull request when launchR has a new minor or major version (`0.6.0`, `1.0.0`), and changes only
 the `@v...` part of these files. Patch versions (`0.6.1`) arrive with the next minor version; to take one sooner,
 change the `@v...` part yourself. Updates to other actions you add come in their own pull requests. Dependabot
-waits 3 days after a release by default; a `cooldown` block in `.github/dependabot.yml` changes that.
+opens the pull request as soon as it sees the release; to make it wait some days first, add a `cooldown` block to
+`.github/dependabot.yml`.
 
 - To decline one version, close the pull request.
 - To stop for good, comment `@dependabot ignore this dependency` on it, or delete `.github/dependabot.yml`.
@@ -101,11 +107,11 @@ Your CI keeps working on the old version either way.
 To keep your own copy of the checks, for example if your organisation blocks outside workflows, run launchR's `eject`
 command. The checks then live in this repository and nothing depends on launchR. "Run the checks on your computer"
 above then uses the copy of the gate in `.launchr/`. From the package's folder, in R, this downloads launchR
-0.0.19 and runs it:
+0.1.0 and runs it:
 
 ```r
 archive <- tempfile(fileext = ".tar.gz")
-download.file("https://github.com/insightsurge/launchR/archive/refs/tags/v0.0.19.tar.gz", archive, mode = "wb")
+download.file("https://github.com/insightsurge/launchR/archive/refs/tags/v0.1.0.tar.gz", archive, mode = "wb")
 folder <- tempfile()
 untar(archive, exdir = folder)
 launchr <- list.dirs(folder, recursive = FALSE)[1]

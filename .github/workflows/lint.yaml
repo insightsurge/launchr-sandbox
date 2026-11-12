@@ -26,6 +26,6 @@ concurrency:
 
 jobs:
   check:
-    uses: insightsurge/launchR/.github/workflows/lint.yaml@fda1fd01526a7f5759d148bcc595c8c794d0e4f4
+    uses: insightsurge/launchR/.github/workflows/lint.yaml@7dff0dc5b8381c2f3e2656c2875b5827a823a6fd
     with:
       ci-report: true   # the CI report comment on pull requests: true posts it, false leaves it out
